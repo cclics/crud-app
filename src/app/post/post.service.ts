@@ -13,8 +13,9 @@ export class PostService {
 
   //private apiURL = "https://jsonplaceholder.typicode.com/";
 
-  private apiURL = "http://localhost:8080";
+  //private apiURL = "http://localhost:8080";
 
+  private apiURL= "https://backend-crud-sbuf.onrender.com";
 
   /*-------------------------
   ---------------------------
