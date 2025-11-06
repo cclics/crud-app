@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+
 
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs';
@@ -15,7 +17,7 @@ export class PostService {
 
   //private apiURL = "http://localhost:8080";
 
-  private apiURL= "https://backend-crud-sbuf.onrender.com";
+  private apiURL= environment.backendApiUrl;
 
 
   /*-------------------------
@@ -42,6 +44,8 @@ export class PostService {
    * */
 
    getAll(): Observable<any> {
+
+      console.log('Backend Server is... ', this.apiURL);     
       return this.httpClient.get(this.apiURL + '/posts')
 
       .pipe(
